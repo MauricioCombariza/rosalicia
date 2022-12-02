@@ -209,6 +209,26 @@ const images = [
     id: 45,
     url: 'https://res.cloudinary.com/combariza/image/upload/v1669642502/Rosalicia/IMG-20221029-WA0038_mnhw4i.jpg',
   },
+  {
+    id: 46,
+    url: 'https://res.cloudinary.com/combariza/image/upload/v1669922962/Rosalicia/IMG-20221130-WA0003_gru5qc.jpg',
+  },
+  {
+    id: 47,
+    url: 'https://res.cloudinary.com/combariza/image/upload/v1669925150/Rosalicia/IMG-20221201-WA0018_dxeaaf.jpg',
+  },
+  {
+    id: 48,
+    url: 'https://res.cloudinary.com/combariza/image/upload/v1669925151/Rosalicia/IMG-20221201-WA0017_ludlsw.jpg',
+  },
+  {
+    id: 49,
+    url: 'https://res.cloudinary.com/combariza/image/upload/v1669925149/Rosalicia/IMG-20221201-WA0016_holumt.jpg',
+  },
+  {
+    id: 50,
+    url: 'https://res.cloudinary.com/combariza/image/upload/v1669925149/Rosalicia/IMG-20221201-WA0015_psxymu.jpg',
+  },
 ]
 
 const nina = [
@@ -278,6 +298,30 @@ const joven = [
   {
     id: 4,
     url: 'https://res.cloudinary.com/combariza/image/upload/v1669734681/Rosalicia/IMG-20221129-WA0003_hxttbw.jpg',
+  },
+  {
+    id: 5,
+    url: 'https://res.cloudinary.com/combariza/image/upload/v1669922960/Rosalicia/IMG-20221129-WA0061_1_v0wpec.jpg',
+  },
+  {
+    id: 6,
+    url: 'https://res.cloudinary.com/combariza/image/upload/v1669922962/Rosalicia/IMG-20221129-WA0064_2_y2smis.jpg',
+  },
+  {
+    id: 7,
+    url: 'https://res.cloudinary.com/combariza/image/upload/v1669922956/Rosalicia/IMG-20221129-WA0072_1_gyiagc.jpg',
+  },
+  {
+    id: 8,
+    url: 'https://res.cloudinary.com/combariza/image/upload/v1669922960/Rosalicia/IMG-20221129-WA0063_1_osw2hv.jpg',
+  },
+  {
+    id: 9,
+    url: 'https://res.cloudinary.com/combariza/image/upload/v1669922964/Rosalicia/IMG-20221129-WA0070_1_d8juvz.jpg',
+  },
+  {
+    id: 10,
+    url: 'https://res.cloudinary.com/combariza/image/upload/v1669922957/Rosalicia/IMG-20221129-WA0059_1_fmbs7z.jpg',
   },
 ]
 

@@ -1,46 +1,78 @@
 <template>
-  <div class="bg-ros1 h-screen">
-    <body>
-      <h1 class="text-2xl text-ros4 flex justify-center mb-10">
-        La Tata 70 años
-      </h1>
-      <section class="container flex justify-center content-center bg-ros3">
-        <img class="w-3/5 rounded-xl m-10" :src="rand" alt="Foto" />
-      </section>
-      <section class="container justify-center content-center bg-ros2">
-        <div>
-          <span
-            ><h3>Escrito por: {{ name }}</h3></span
-          >
+  <div>
+    <div class="bg-ros1 h-full">
+      <div class="flex justify-center">
+        <img
+          src="https://res.cloudinary.com/combariza/image/upload/v1669978440/Rosalicia/feliz_cumpleanos_qjmxnk.avif"
+          alt="Fondo"
+          class="h-screen z-0 relative"
+        />
+        <div class="bg-white mt-10 z-20 absolute border-1 border-black">
+          <div class="flex justify-center">
+            <div class="absolute rotate-45 bg-yellow-100 h-10 w-24 z-40">.</div>
+          </div>
+          <img
+            class="h-56 lg:h-96 content-center mt-8 mr-5 ml-5 mb-14 border-1 border-black"
+            :src="foto"
+            alt="Foto"
+          />
+          <div class="flex justify-center">
+            <div class="absolute rotate-45 bg-yellow-100 h-10 w-24 z-40">.</div>
+          </div>
         </div>
-        <div>
-          <p>{{ texto }}</p>
+      </div>
+      <footer class="inset-0 bg-white flex flex-row justify-end content-center">
+        <NuxtLink to="/home">
+          <font-awesome-icon
+            :icon="['fa', 'child-dress']"
+            class="icon alt text-3xl m-3"
+          />
+        </NuxtLink>
+        <NuxtLink to="/joven">
+          <font-awesome-icon
+            :icon="['fa', 'tree']"
+            class="icon alt text-3xl m-3"
+          />
+        </NuxtLink>
+
+        <NuxtLink to="/actual">
+          <font-awesome-icon
+            :icon="['fa', 'sun']"
+            class="icon alt text-3xl m-3"
+          />
+        </NuxtLink>
+
+        <NuxtLink to="/letter">
+          <font-awesome-icon
+            :icon="['fa', 'envelope']"
+            class="icon alt text-3xl m-3"
+          />
+        </NuxtLink>
+        <div @click="refresh">
+          <font-awesome-icon
+            :icon="['fa', 'chevron-right']"
+            class="icon alt text-3xl m-3"
+          />
         </div>
-      </section>
-    </body>
+
+        <NuxtLink to="/about"> </NuxtLink>
+      </footer>
+    </div>
   </div>
 </template>
 
 <script>
-import { nina } from '~/assets/image'
-import { textHermano, nameHermano } from '~/assets/text'
+import { ninaRand, fondoRand } from '~/assets/image'
 export default {
   data() {
     return {
-      min: 1,
-      max: nina.length - 1,
-      nina,
-      texto: textHermano,
-      name: nameHermano,
+      fondo: fondoRand,
+      foto: ninaRand,
     }
   },
-  computed: {
-    randomIntFromInterval() {
-      // min and max included
-      return Math.floor(Math.random() * (this.max - this.min + 1) + this.min)
-    },
-    rand() {
-      return this.nina[this.randomIntFromInterval].url
+  methods: {
+    refresh() {
+      window.location.reload(true)
     },
   },
 }
@@ -52,6 +84,6 @@ body {
 }
 
 /* h1 {
-  font-size: 4rem;
-} */
+    font-size: 4rem;
+  } */
 </style>
