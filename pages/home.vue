@@ -1,5 +1,13 @@
 <template>
   <div>
+    <header>
+      <div @click="add">
+        <font-awesome-icon
+          :icon="['fa', 'chevron-right']"
+          class="icon alt text-3xl m-3"
+        />
+      </div>
+    </header>
     <div class="bg-ros1 h-full">
       <div class="flex justify-center">
         <img :src="fondo" alt="Fondo" class="h-screen z-0 relative" />
@@ -22,13 +30,40 @@
 </template>
 
 <script>
-import { ninaRand, fondoRand } from '~/assets/image'
+import { maxfondo, fondo, nina, maxnina } from '~/assets/image'
 export default {
   data() {
     return {
-      fondo: fondoRand,
-      foto: ninaRand,
+      bg: fondo,
+      base: nina,
+      maxfondo,
+      iter: 0,
+      iterFondo: 0,
+      max: maxnina,
     }
+  },
+  computed: {
+    foto() {
+      return this.base[this.iter].url
+    },
+    fondo() {
+      return this.bg[this.iterFondo].url
+    },
+  },
+  methods: {
+    add() {
+      if (this.iter === this.max) {
+        this.iter = 0
+      } else {
+        this.iter = this.iter + 1
+      }
+
+      if (this.iterFondo === this.maxfondo) {
+        this.iterFondo = 0
+      } else {
+        this.iterFondo = this.iterFondo + 1
+      }
+    },
   },
 }
 </script>

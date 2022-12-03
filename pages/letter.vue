@@ -1,11 +1,19 @@
 <template>
   <div>
+    <header>
+      <div @click="add">
+        <font-awesome-icon
+          :icon="['fa', 'chevron-right']"
+          class="icon alt text-3xl m-3"
+        />
+      </div>
+    </header>
     <div class="bg-ros1 h-full">
       <div class="flex justify-center">
-        <img :src="fondo" alt="Fondo" class="h-screen z-0 relative" />
+        <img :src="bgf" alt="bgf" class="h-screen z-0 relative" />
         <div class="z-20 absolute">
           <div class="flex justify-center">
-            <div class="absolute rotate-45 bg-yellow-100 h-10 w-24 z-40">.</div>
+            <div class="absolute rotate-45 bg-yellow-100 h-8 w-24 z-40">.</div>
           </div>
           <div class="letter">
             <p>{{ saludo }}:</p>
@@ -15,7 +23,9 @@
             <p>Con cariño: {{ firma }}</p>
           </div>
           <div class="flex justify-center">
-            <div class="absolute rotate-45 bg-yellow-100 h-10 w-24 z-40">.</div>
+            <div class="absolute rotate-45 bg-yellow-100 h-8 w-24 z-40">
+              {{ maxfondo }}
+            </div>
           </div>
         </div>
       </div>
@@ -24,18 +34,47 @@
 </template>
 
 <script>
-import { textcarta, firmacarta, maxcarta, saludocarta } from '~/assets/text'
-import { fondoRand } from '~/assets/image'
+import { maxcarta, cartas } from '~/assets/text'
+import { maxfondo, fondo } from '~/assets/image'
 export default {
   data() {
     return {
-      value: 0,
-      texto: textcarta,
-      firma: firmacarta,
-      saludo: saludocarta,
-      fondo: fondoRand,
-      max: maxcarta,
+      maxcarta,
+      maxfondo,
+      bg: fondo,
+      iter: 0,
+      iterFondo: 0,
+      txt: cartas,
     }
+  },
+  computed: {
+    texto() {
+      return this.txt[this.iter].txt
+    },
+    firma() {
+      return this.txt[this.iter].firma
+    },
+    saludo() {
+      return this.txt[this.iter].saludo
+    },
+    bgf() {
+      return this.bg[this.iterFondo].url
+    },
+  },
+  methods: {
+    add() {
+      if (this.iter === this.maxcarta) {
+        this.iter = 0
+      } else {
+        this.iter = this.iter + 1
+      }
+
+      if (this.iterFondo === this.maxfondo) {
+        this.iterFondo = 0
+      } else {
+        this.iterFondo = this.iterFondo + 1
+      }
+    },
   },
 }
 </script>
@@ -51,7 +90,7 @@ body {
   background: #fff;
   box-shadow: 0 0 10px rgba(0 0 0 / 30%);
   margin: 26px auto 0;
-  max-width: 350px;
+  max-width: 300px;
   min-height: 300px;
   padding: 24px;
   position: relative;

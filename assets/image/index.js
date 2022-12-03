@@ -361,26 +361,26 @@ const fondo = [
 ]
 
 const min = 0
-const maxp = fondo.length - 1
-const maxa = images.length - 1
-const maxn = nina.length - 1
-const maxj = joven.length - 1
+const maxfondo = fondo.length - 1
+const maxactual = images.length - 1
+const maxnina = nina.length - 1
+const maxjoven = joven.length - 1
 
 function randomIntFondo() {
   // min and max included
-  return Math.floor(Math.random() * (maxp - min + 1) + min)
+  return Math.floor(Math.random() * (maxfondo - min + 1) + min)
 }
 function randomIntActual() {
   // min and max included
-  return Math.floor(Math.random() * (maxa - min + 1) + min)
+  return Math.floor(Math.random() * (maxactual - min + 1) + min)
 }
 function randomIntNina() {
   // min and max included
-  return Math.floor(Math.random() * (maxn - min + 1) + min)
+  return Math.floor(Math.random() * (maxnina - min + 1) + min)
 }
 function randomIntJoven() {
   // min and max included
-  return Math.floor(Math.random() * (maxj - min + 1) + min)
+  return Math.floor(Math.random() * (maxjoven - min + 1) + min)
 }
 
 const i = randomIntFondo()
@@ -401,3 +401,7 @@ module.exports.fondoRand = fondoRand
 module.exports.actualRand = actualRand
 module.exports.ninaRand = ninaRand
 module.exports.jovenRand = jovenRand
+module.exports.maxfondo = maxfondo
+module.exports.maxnina = maxnina
+module.exports.maxjoven = maxjoven
+module.exports.maxactual = maxactual
