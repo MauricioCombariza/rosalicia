@@ -23,9 +23,7 @@
             <p>Con cariño: {{ firma }}</p>
           </div>
           <div class="flex justify-center">
-            <div class="absolute rotate-45 bg-yellow-100 h-8 w-24 z-40">
-              {{ maxfondo }}
-            </div>
+            <div class="absolute rotate-45 bg-yellow-100 h-8 w-24 z-40">.</div>
           </div>
         </div>
       </div>
