@@ -348,6 +348,41 @@ const cartas = [
       },
     ],
   },
+  {
+    id: 15,
+    firma: 'Juanse',
+    saludo: 'Feliz cumple tía',
+    txt: [
+      {
+        p: 1,
+        texto:
+          'Qué bonitos recuerdos tengo contigo en estos treinta y tres años de mi vida, siempre alegre, riendo y jugando, o cocinando cositas ricas para la familia.',
+      },
+      {
+        p: 2,
+        texto:
+          'De chiquito me encantaba ir a tu apartamento a correr por todos lados, ver televisión y jugar, y de grande siempre me ha gustado tu compañía alegre y los jueguitos en los que siempre reímos. ',
+      },
+      {
+        p: 3,
+        texto:
+          'Ya son setenta años y te mantienes bella, llena de energía y amabilidad, con un corazón grande que no se deslumbra por la gloria pasajera, pues todos en la familia sabemos que, si hubieras querido, habrías ganado mas Tours de Francia que Amstrong y Froome juntos.',
+      },
+      {
+        p: 4,
+        texto:
+          'Te deseo un mes entero de celebraciones en compañía de la familia y los amigos, seguro que todos estarán ávidos de celebrar contigo.',
+      },
+      {
+        p: 5,
+        texto: 'Un abracito y un besito desde Santiago.',
+      },
+      {
+        p: 6,
+        texto: 'Te quiero.',
+      },
+    ],
+  },
 ]
 
 const min = 0
