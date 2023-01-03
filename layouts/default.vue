@@ -28,6 +28,13 @@
           class="icon alt text-3xl m-3"
         />
       </NuxtLink>
+
+      <NuxtLink to="/videos">
+        <font-awesome-icon
+          :icon="['fa', 'video-camera']"
+          class="icon alt text-3xl m-3"
+        />
+      </NuxtLink>
     </footer>
   </div>
 </template>
